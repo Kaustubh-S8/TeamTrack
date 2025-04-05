@@ -1,90 +1,124 @@
-TeamTrack - Spring MVC Application
-🌟 Welcome to the Employee Management System
-A robust Spring MVC application designed for seamless employee registration, authentication, and CRUD operations. Perfect for HR management, team tracking, and administrative tasks.
+# 💼 TeamTrack - Spring MVC Application
 
-🎯 Core Features
-👤 User Management
-Register & Login: Employees can securely register and log in.
+Welcome to the **Employee Management System** – a robust web application built using the **Spring MVC Framework**, designed to streamline employee registration, authentication, and management for administrative and HR needs.
 
-Session Handling: Uses HttpServletRequest for authentication.
+---
 
-🛠️ Admin & Employee Dashboard
-View All Employees: Admins can see the complete employee list.
+## 🚀 Features
 
-Add/Edit/Delete: Full CRUD functionality for employee records.
+### 👤 User Management
+- **Register & Login** – Employees can securely register and log in.
+- **Session Handling** – Maintains session with `HttpServletRequest`.
 
-Status Updates: Toggle employee activity (if extended with service logic).
+### 🛠️ Admin & Employee Dashboard
+- **View All Employees** – Admins can see the complete employee list.
+- **Add / Edit / Delete Employees** – Full CRUD functionality.
+- **Status Updates** *(optional)* – Toggle employee active status with extended logic.
 
-📊 Workflow
-Registration → Login → Dashboard
+---
 
+## 📊 Workflow Overview
+
+```
+Registration → Login → Dashboard  
 Add/Edit Employees → Save Changes → View Updates
+```
 
-🖥️ Technology Stack
-Frontend	Backend	Database	APIs
-🔹 JSP	🍃 Spring MVC	🗃️ MySQL (or any RDBMS)	🔗 RESTful Controllers
-🚀 Key Endpoints
-HTTP Method	Endpoint	Description	View
-GET	/	Registration page	index.jsp
-POST	/save	Saves new employee	login.jsp
-POST	/login	Authenticates user	home.jsp or login.jsp
-GET	/home	Shows all employees (dashboard)	home.jsp
-GET	/edit	Edits employee by ID	add.jsp
-GET	/delete	Deletes employee by ID	home.jsp
-📂 Project Structure
-plaintext
-Copy
-📂 emp-mvc-app  
-├── 📁 src/main/java  
-│   └── 📁 com/ty/empapp  
-│       ├── 📄 EmpController.java  # Controller logic  
-│       ├── 📁 entity              # Employee POJO  
-│       └── 📁 service             # Business logic  
-├── 📁 src/main/webapp  
-│   ├── 📄 index.jsp              # Registration  
-│   ├── 📄 login.jsp              # Login  
-│   ├── 📄 home.jsp               # Dashboard  
-│   └── 📄 add.jsp                # Add/Edit form  
-└── 📄 pom.xml                    # Maven dependencies  
-🛠️ Setup Instructions
-✅ Prerequisites
-Java JDK 17+
+---
 
-Apache Tomcat 9+
+## 🖥️ Tech Stack
 
-Maven
+| Frontend | Backend     | Database | API Type          |
+|----------|-------------|----------|-------------------|
+| JSP      | Spring MVC  | MySQL    | RESTful Endpoints |
 
-MySQL (or any database configured in application.properties)
+---
 
-⚙️ Configuration
-Database Setup:
+## 🔗 Key Endpoints
 
-properties
-Copy
-spring.datasource.url=jdbc:mysql://localhost:3306/emp_db  
-spring.datasource.username=root  
-spring.datasource.password=yourpassword  
+| Method | Endpoint   | Description                     | View       |
+|--------|------------|---------------------------------|------------|
+| GET    | `/`        | Registration page               | `index.jsp` |
+| POST   | `/save`    | Save new employee               | `login.jsp` |
+| POST   | `/login`   | Authenticate user               | `home.jsp` or `login.jsp` |
+| GET    | `/home`    | Show employee dashboard         | `home.jsp` |
+| GET    | `/edit`    | Edit employee by ID             | `add.jsp` |
+| GET    | `/delete`  | Delete employee by ID           | `home.jsp` |
 
-💡 How It Works
-Employee Registration:
+---
 
-Fill details in index.jsp → Submit to /save.
+## 📁 Project Structure
 
-Login:
+```
+emp-mvc-app/
+├── src/main/java
+│   └── com/ty/empapp
+│       ├── EmpController.java       # Controller logic
+│       ├── entity/                  # Employee POJO
+│       └── service/                 # Business logic
+├── src/main/webapp
+│   ├── index.jsp                    # Registration
+│   ├── login.jsp                    # Login
+│   ├── home.jsp                     # Dashboard
+│   └── add.jsp                      # Add/Edit form
+└── pom.xml                          # Maven dependencies
+```
 
-Enter credentials → /login validates → Redirects to home.jsp.
+---
 
-Manage Employees:
+## ⚙️ Setup Instructions
 
-Add: Via add.jsp.
+### ✅ Prerequisites
 
-Edit/Delete: Admins use /edit or /delete endpoints.
+- Java 17+
+- Apache Tomcat 9+
+- Maven
+- MySQL (or another RDBMS)
 
-📜 License
-MIT License. Contribute or fork freely!
+### 🛠️ Configuration
 
-📧 Contact
-For questions or enhancements:
-✉️ satamkaustubh2003@email.com
+Edit `application.properties`:
 
-Simplify HR management today! 👥💼
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/emp_db
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+```
+
+### 🌐 Access the App
+
+Open in browser:
+
+```
+http://localhost:8080/
+```
+
+---
+
+## 💡 How It Works
+
+- **Registration** – Fill out `index.jsp`, data goes to `/save`.
+- **Login** – Submit credentials to `/login`, session is created.
+- **Dashboard** – Add/Edit/Delete employees via provided endpoints.
+
+---
+
+## 📜 License
+
+[MIT License](LICENSE)
+
+Feel free to fork, contribute, or customize this project to suit your needs.
+
+---
+
+## 📧 Contact
+
+For issues, suggestions, or improvements:
+
+**Kaustubh Satam**  
+✉️ satamkaustubh2003@email.com  
+🔗 [GitHub - Kaustubh-S8](https://github.com/Kaustubh-S8)
+
+---
+
+### 👥 Simplify HR Management – One Employee at a Time!
